@@ -9,7 +9,7 @@ spec:
   project: production
   source:
     path: helm
-    repoURL: https://github.com/sameershah21/argocd-15-min.git
+    repoURL: https://github.com/sameershah21/my-devops-toolkit.git
     targetRevision: HEAD
   destination:
     namespace: production

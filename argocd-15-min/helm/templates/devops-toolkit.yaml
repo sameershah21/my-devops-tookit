@@ -9,7 +9,7 @@ spec:
   project: production
   source:
     path: helm
-    repoURL: https://github.com/sameershah21/my-devops-tookit.git
+    repoURL: https://github.com/sameershah21/devops-tookit.git
     targetRevision: HEAD
     helm:
       values: |
