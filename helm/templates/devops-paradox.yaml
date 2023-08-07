@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-toolkit
+  name: devops-paradox
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: default
   source:
     path: helm
-    repoURL: https://github.com/sameershah21/devops-tookit.git
+    repoURL: https://github.com/sameershah21/devops-paradox.git
     targetRevision: HEAD
     helm:
       values: |
         image:          
           tag: latest
         ingress:
-          host: devops-toolkit.192.168.64.14.xip.io
+          host: devops-paradox.$INGRESS_HOST.xip.io
       version: v3
   destination:
     namespace: production
